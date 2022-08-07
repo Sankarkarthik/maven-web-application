@@ -24,5 +24,11 @@ steps:
   inputs:
     containerRegistry: 'docker'
     command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker'
+    repository: 'sankarkarthik225 / maven-web-application'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
 
 
